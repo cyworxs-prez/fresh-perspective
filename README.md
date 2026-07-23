@@ -38,15 +38,17 @@ docs/
 
 ## Initial collections
 
-- `skills/country-influence-analysis/` — country- and subnational-level influence, access, infrastructure, actor-network, indicators-and-warning, and decision-support analysis.
+- `skills/influence-access-analysis/` — actor-neutral country, territory, region, theater, and subnational influence, access, infrastructure, network, indicators-and-warning, analytic-standards, and decision-support skills.
 - `workflows/staff-work/` — repeatable procedures for inbox management, reporting, activity capture, task tracking, and executive support.
 - `automations/staff-work/` — scheduled and event-driven specifications for automating routine staff work.
 
 ## Contribution standards
 
 - Keep assets reusable and domain-appropriate.
-- Remove references to prior clients, countries, reports, or outputs unless essential to the asset.
-- Separate fact, inference, assumption, and confidence.
+- Remove references to prior clients, countries, adversaries, reports, or outputs unless essential to the asset.
+- Require an explicit scope profile when geography, target actor, partner, mission, audience, or planning horizon would change the analysis.
+- Never inherit country, adversary, partner, or mission assumptions from a previous output without confirmation.
+- Separate fact, inference, assumption, severity, and confidence.
 - Include safety, privacy, source-quality, and approval controls where relevant.
 - Prefer modular skills and workflows over monolithic prompts.
 - Store reusable tables, schemas, ledgers, and configuration examples in `templates/`.
