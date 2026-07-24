@@ -72,10 +72,12 @@ skills/
     intelligence/
   space-force/
     intelligence/
-  <other-collection>/
+  functional/
+    <methodology-collection>/
+      <skill-name>/SKILL.md
 ```
 
-Use `shared/` for methods that are substantially common across communities. Use Joint, IC, or Service namespaces when doctrine, terminology, workflow, authority, or required artifacts materially differ.
+Use `shared/` for methods that are substantially common across communities. Use Joint, IC, or Service namespaces when doctrine, terminology, workflow, authority, or required artifacts materially differ. Use `functional/` for methodology collections that apply across communities and are not owned by any one doctrine, such as influence and access analysis or homeland indicators and warning.
 
 Do not create a top-level folder for every publication. Publication-specific implementation belongs under the governing namespace, such as `ic/icd/icd-203-analytic-standards/`.
 
@@ -89,7 +91,7 @@ name: stable-machine-readable-name
 summary: One-sentence capability description.
 version: 0.1
 maturity: draft
-namespace: shared | joint | ic | army | navy | marine-corps | air-force | space-force
+namespace: shared | joint | ic | army | navy | marine-corps | air-force | space-force | functional
 human_role: analyst | planner | reviewer | manager
 references:
   - applicable publication or policy
@@ -117,7 +119,9 @@ Every skill should include:
 - `shared/intelligence-tradecraft/` — analyst interview and scoping, evidence and claim ledgers, structured analytic technique facilitation, and assessment-language and confidence support.
 - `joint/intelligence/` — JIPOE operational-environment, actor, capability, course-of-action, indicator, and gap support.
 - `ic/icd/` — public ICD 203 analytic-standards and ICD 206 sourcing reviews.
-- `influence-access-analysis/` — generalized, actor-neutral skills for baselining, source tradecraft, environmental mapping, actor-network analysis, critical-node analysis, indications and warning, integration, and executive reporting.
+- `army/intelligence/` — Army IPB steps one through four with companion prompts.
+- `functional/influence-access-analysis/` — generalized, actor-neutral skills for baselining, source tradecraft, environmental mapping, actor-network analysis, critical-node analysis, indications and warning, integration, and executive reporting.
+- `functional/homeland-indicators-warning/` — whole-of-government Homeland strategic-warning skill.
 
 ## Quality and maturity
 

@@ -92,6 +92,8 @@ skills/
     intelligence/
   space-force/
     intelligence/
+  functional/
+    <methodology-collection>/
 
 prompts/
   shared/
@@ -100,9 +102,13 @@ prompts/
   ic/
     icd/
   <service>/intelligence/
+  functional/
+    <methodology-collection>/
 ```
 
 Use `shared/` for methods that are substantially common across communities, such as evidence ledgers, structured analytic techniques, assumption checks, confidence support, and analytic writing. Place a service- or joint-specific implementation in its own namespace when doctrine, terminology, workflow, or required artifact materially differs.
+
+Use `functional/` for methodology collections that apply across communities and are not owned by any one doctrine or service — for example influence and access analysis, homeland indicators and warning, or generalized all-source research. A collection belongs in a community namespace when a specific community's doctrine or policy governs it; it belongs in `functional/` when the method itself is the organizing principle.
 
 Do not create a top-level folder for each publication. Place publication-specific implementation under the relevant namespace, such as `skills/ic/icd/icd-203-analytic-standards/`.
 
@@ -116,7 +122,7 @@ name: stable-machine-readable-name
 summary: One-sentence capability description.
 version: 0.1
 maturity: draft
-namespace: shared | joint | ic | army | navy | marine-corps | air-force | space-force
+namespace: shared | joint | ic | army | navy | marine-corps | air-force | space-force | functional
 human_role: analyst | planner | reviewer | manager
 references:
   - publication or policy title

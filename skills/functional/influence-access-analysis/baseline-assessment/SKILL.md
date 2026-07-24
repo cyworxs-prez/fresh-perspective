@@ -139,7 +139,7 @@ Include:
 
 ### Phase 6: Score and prioritize
 
-Use the scoring template in `templates/scoring-model.md`.
+Use the scoring template in `templates/intelligence/influence-scoring-model.md` (repository root).
 
 ### Phase 7: Produce decision support
 
