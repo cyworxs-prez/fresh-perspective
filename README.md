@@ -100,6 +100,8 @@ templates/
   <other-domain>/
 ```
 
+Templates live centrally under `templates/`; skills link to them rather than carrying their own copies.
+
 Planned but not yet populated: `frameworks/`, `examples/`, and `docs/` top-level directories, and the navy, marine-corps, air-force, and space-force service namespaces.
 
 A publication is normally a reference inside a functional skill rather than a top-level folder. Publication-specific implementation belongs under the governing namespace, such as `skills/ic/icd/icd-203-analytic-standards/`.

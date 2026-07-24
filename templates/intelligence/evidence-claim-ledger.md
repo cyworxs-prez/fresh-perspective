@@ -1,6 +1,6 @@
 # Evidence and Claim Ledger
 
-Create one record per material proposition. Use organizationally required fields or ratings when they differ from this neutral baseline.
+Create one record per material proposition. Use organizationally required fields or ratings when they differ from this neutral baseline. A spreadsheet-ready variant tailored to influence and access analysis is available as `influence-claim-ledger.csv` in this directory.
 
 | Field | Entry |
 |---|---|

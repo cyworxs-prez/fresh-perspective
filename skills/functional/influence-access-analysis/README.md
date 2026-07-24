@@ -62,7 +62,7 @@ Do not assume an adversary, partner, mission, geography, audience, or desired co
 A practical operating rhythm is:
 
 1. Create a working folder or case workspace for the assessment.
-2. Copy the analysis-profile template and complete it with the user.
+2. Copy the analysis-profile template (`templates/intelligence/influence-analysis-profile.md` at the repository root) and complete it with the user.
 3. Open the claim ledger before collecting evidence.
 4. Add claims, sources, dates, reliability, credibility, and corroboration as research progresses.
 5. Maintain the environmental, actor, node, and indicator artifacts as separate working products.
@@ -71,6 +71,10 @@ A practical operating rhythm is:
 8. Produce a concise decision-oriented report and retain the supporting ledgers for audit and updates.
 
 For recurring monitoring, pair this skill collection with an approved workflow and automation. The automation should identify which skill version, source windows, indicators, thresholds, and review gates it uses.
+
+## Templates
+
+The collection's working templates live centrally under `templates/intelligence/` at the repository root: `influence-analysis-profile.md`, `influence-claim-ledger.csv`, `influence-scoring-model.md`, `actor-edge-list.csv`, `critical-node-register.csv`, and `indicator-register.csv`.
 
 ## Expected working artifacts
 
