@@ -183,7 +183,7 @@ Actor-neutral skills for area baselining, source tradecraft, environmental mappi
 
 `prompts/automation-design/`
 
-Interview-first prompts for configuring recurring staff work on an already authenticated desktop agent, including email triage, periodic reporting, meeting support, suspense tracking, and records-safe inbox cleanup.
+Discovery-first prompts for configuring recurring staff work on an already authenticated desktop agent, including email triage, periodic reporting, meeting support, suspense tracking, and inbox organization with records-safe cleanup. Each builder inspects the authorized environment first, presents what it found, and resolves remaining choices as numbered options with recommended defaults.
 
 ## Governance and safety
 

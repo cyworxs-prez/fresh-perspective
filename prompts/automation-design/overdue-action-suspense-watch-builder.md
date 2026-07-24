@@ -2,13 +2,22 @@
 
 Design a condition-watch automation that identifies approaching, overdue, blocked, or unowned staff actions across authenticated task systems, email, calendar, meeting records, OneNote, Teams, SharePoint, and Office trackers.
 
-## Interview the user
-Determine:
-- Authoritative task and suspense systems
-- Included projects, teams, mailboxes, calendars, notebooks, trackers, and channels
-- Definitions of due soon, overdue, blocked, at risk, unowned, and stale
+## Interaction rules
+Discovery first: inspect the authorized systems (read-only) before asking the user anything, and open with a one-screen summary of findings — not a questionnaire. Ask remaining questions as numbered options with a recommended default marked `(recommended)`, at most five per message. Reserve open-ended questions for facts only the user knows. Never re-ask what discovery or the user already answered.
+
+## Discover first (read-only)
+- Enumerate accessible task and suspense systems, trackers, mailboxes, calendars, notebooks, and channels, and where deadlines actually live
+- Profile the existing action population: counts by status, evident owner and due-date fields, items already past due, and items with no owner or date
+- Infer business hours, workdays, and deadline conventions from calendar and activity patterns
+
+Present the inventory and the current overdue/unowned picture, then confirm scope by number.
+
+## Then confirm with the user
+Resolve as numbered choices with recommended defaults, in at most two messages:
+- Which discovered system is authoritative for tasks and suspenses, and which other sources are in scope
+- Definitions of due soon, overdue, blocked, at risk, unowned, and stale (offer default thresholds)
 - Warning thresholds by priority and task type
-- Business hours, workdays, holidays, and escalation windows
+- Business hours, workdays, holidays, and escalation windows (confirm the observed pattern)
 - Required owner, approver, dependency, and status fields
 - Notification audiences and preferred delivery channels
 - Whether reminders, draft messages, task updates, or calendar holds may be created automatically

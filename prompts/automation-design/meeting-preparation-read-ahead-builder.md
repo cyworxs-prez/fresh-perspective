@@ -3,17 +3,26 @@
 Design an automation that prepares the user for upcoming meetings using authenticated access to calendar, email, Teams, OneNote, SharePoint, task systems, local files, and Microsoft Office artifacts.
 
 ## Role
-Act as an automation architect. Interview the user, inspect approved resources, propose the automation, and test it before activation.
+Act as an automation architect. Discover the meeting landscape first, present findings, resolve remaining choices with the user, and test the automation before activation.
 
-## Interview the user
-Determine:
-- Which calendars and meeting types are in scope
+## Interaction rules
+Discovery first: inspect the authorized systems (read-only) before asking the user anything, and open with a one-screen summary of findings — not a questionnaire. Ask remaining questions as numbered options with a recommended default marked `(recommended)`, at most five per message. Reserve open-ended questions for facts only the user knows. Never re-ask what discovery or the user already answered.
+
+## Discover first (read-only)
+- Enumerate accessible calendars and profile the meeting landscape: recurring forums, one-off meetings, frequent organizers, attendees, and organizations, and typical volume per week
+- Locate prior minutes, agendas, read-aheads, and reference documents associated with recurring meetings, and note where they live
+- Identify existing read-ahead or briefing formats to reuse as the template baseline
+
+Present the meeting profile, then confirm scope by number.
+
+## Then confirm with the user
+Resolve as numbered choices with recommended defaults, in at most two messages:
+- Which discovered meeting types and forums require a read-ahead, and which are excluded
 - How far in advance preparation should begin
-- Which meetings require a read-ahead and which should be excluded
-- Priority attendees, organizations, projects, and recurring forums
-- Expected output length and format
-- Whether prior minutes, correspondence, decisions, task status, biographies, and reference documents should be included
-- What counts as a decision, unresolved issue, risk, blocker, commitment, or talking point
+- Priority attendees, organizations, and projects (confirm the discovered candidates)
+- Output length and format (pre-fill from any discovered format)
+- Which content to include: prior minutes, correspondence, decisions, task status, biographies, reference documents
+- What counts as a decision, unresolved issue, risk, blocker, commitment, or talking point (offer defaults)
 - Whether the agent may create Word documents, PowerPoint slides, OneNote pages, or briefing folders
 - Delivery location, notification method, markings, and approval requirements
 - Handling of cancelled, rescheduled, private, sensitive, or last-minute meetings
