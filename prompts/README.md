@@ -57,11 +57,12 @@ prompts/
     intelligence/
   space-force/
     intelligence/
+  functional/
+    <methodology-collection>/
   automation-design/
-  <other-domain-or-function>/
 ```
 
-Use `shared/` for methods that are substantially common across communities. Use Joint, IC, or Service namespaces when doctrine, terminology, workflow, authority, or required artifacts materially differ. Publication-specific prompts belong under the governing namespace, such as `prompts/ic/icd/icd-203-product-reviewer.md`.
+Use `shared/` for methods that are substantially common across communities. Use Joint, IC, or Service namespaces when doctrine, terminology, workflow, authority, or required artifacts materially differ. Use `functional/` for cross-community methodology collections not owned by any one doctrine, such as generalized all-source research. Publication-specific prompts belong under the governing namespace, such as `prompts/ic/icd/icd-203-product-reviewer.md`.
 
 ## Day-to-day analytic use
 
@@ -119,4 +120,6 @@ Analytic prompts should be tested against normal, ambiguous, evidence-gap, contr
 - `shared/intelligence-tradecraft/` — interview and scoping, evidence ledgers, structured analytic technique facilitation, and key-judgment drafting.
 - `joint/intelligence/` — JIPOE operational-environment and actor/course-of-action support.
 - `ic/icd/` — ICD 203 analytic-standards and ICD 206 sourcing review prompts.
+- `army/intelligence/` — companion prompts for the four Army IPB skills.
+- `functional/research-analysis/all-source/` — fifteen-prompt generalized all-source research sequence.
 - `automation-design/` — discovery-first builder prompts for recurring staff work on an already authenticated desktop agent or LLM environment.

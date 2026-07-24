@@ -1,0 +1,53 @@
+# Draft template - not activated. Fill every empty field from the user's
+# approved builder session before the dry run; activate only with explicit
+# user approval recorded below.
+automation_name: "Inbox Maintenance"
+automation_type: scheduled
+status: draft
+approved_by: ""
+approved_date: ""
+
+schedule:
+  plain_language: ""            # e.g. "Fridays at 16:00 local"
+  expression: ""                # cron or platform equivalent
+  timezone: ""
+  business_days_only: true
+  holiday_behavior: skip
+
+scope:
+  mailboxes: []                 # from discovery, user-confirmed
+  protected_folders: []         # never reorganized, never cleaned
+  policy_constraints: []        # retention, legal hold, records, privacy
+
+maintenance_actions:
+  apply_rules_to_missed_mail: automatic          # per approved rule set only
+  refile_misfiled_mail: approval_required
+  archive_older_than: ""                         # e.g. "180d"; archive, not delete
+  newsletter_disposition: ""                     # e.g. "move to Newsletters folder"
+  duplicate_handling: report_only
+  unsubscribe: approval_required
+  delete: disabled
+
+limits:
+  batch_limit_per_run: 200
+  max_runtime_minutes: 15
+
+outputs:
+  preview_report_destination: ""
+  summary_report_destination: ""
+  pending_approval_queue: ""
+
+logging:
+  audit_log_destination: ""
+  log_fields: [timestamp, item_id, before_state, after_state, action_category, batch_id, approval_ref]
+  retention: ""
+
+failure_behavior:
+  retry_count: 2
+  retry_backoff_minutes: 10
+  on_partial_failure: complete_batch_then_report
+  on_access_failure: skip_and_report
+  notify_on_failure: true
+
+idempotency:
+  batch_tracking: required      # a completed approved batch is never reprocessed

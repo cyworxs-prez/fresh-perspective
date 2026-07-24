@@ -66,7 +66,9 @@ skills/
     intelligence/
   space-force/
     intelligence/
-  <other-collection>/
+  functional/
+    <methodology-collection>/
+      <skill-name>/SKILL.md
 
 prompts/
   README.md
@@ -78,6 +80,8 @@ prompts/
     icd/
   <service>/
     intelligence/
+  functional/
+    <methodology-collection>/
   automation-design/
 
 workflows/
@@ -94,13 +98,15 @@ automations/
 templates/
   intelligence/
   <other-domain>/
-
-frameworks/
-examples/
-docs/
 ```
 
+Templates live centrally under `templates/`; skills link to them rather than carrying their own copies.
+
+Planned but not yet populated: `frameworks/`, `examples/`, and `docs/` top-level directories, and the navy, marine-corps, air-force, and space-force service namespaces.
+
 A publication is normally a reference inside a functional skill rather than a top-level folder. Publication-specific implementation belongs under the governing namespace, such as `skills/ic/icd/icd-203-analytic-standards/`.
+
+Namespace rule: a collection governed by a specific community's doctrine or policy lives under `shared/`, `joint/`, `ic/`, or a `<service>/` namespace. A methodology collection that applies across communities and is not owned by any one doctrine — such as influence and access analysis, homeland indicators and warning, or generalized all-source research — lives under `functional/`.
 
 Use `shared/` for methods that are substantially common across communities, including analyst interviews, evidence ledgers, structured analytic techniques, assumptions, confidence support, and analytic writing. Create a Joint or Service-specific version when doctrine, terminology, workflow, or required artifacts materially differ.
 
@@ -173,11 +179,29 @@ Initial directive-based skills support:
 
 Companion prompts are under `prompts/ic/icd/`. These are diagnostic aids, not organizational compliance certifications.
 
+### Army intelligence
+
+`skills/army/intelligence/`
+
+Army IPB skills covering all four steps: define the operational environment, describe environmental effects, evaluate the threat, and determine threat courses of action. Companion prompts are under `prompts/army/intelligence/`.
+
 ### Influence and access analysis
 
-`skills/influence-access-analysis/`
+`skills/functional/influence-access-analysis/`
 
 Actor-neutral skills for area baselining, source tradecraft, environmental mapping, actor-network analysis, critical-node analysis, indicators and warning, analytic integration, and commander or executive reporting.
+
+### Homeland indicators and warning
+
+`skills/functional/homeland-indicators-warning/`
+
+Whole-of-government strategic-warning skill correlating lawful civilian, regulatory, commercial, infrastructure, and security observations into decision-linked Homeland warning.
+
+### All-source research and analysis
+
+`prompts/functional/research-analysis/all-source/`
+
+A fifteen-prompt sequence for generalized all-source research: problem decomposition, search strategy, source extraction, ownership and finance mapping, network and system analysis, competing hypotheses, indicators, confidence calibration, judgment drafting, red-team critique, citation audit, and update detection.
 
 ### Automation design
 
@@ -217,6 +241,21 @@ Every reusable asset must:
 - **Tested:** exercised against representative normal and failure cases.
 - **Operational:** approved for recurring use in a defined environment.
 - **Reference:** stable guidance or template intended for reuse.
+
+## Roadmap
+
+Deferred capabilities, in rough priority order:
+
+- collection management as a dedicated skill (PIR/RFI/ISR request lifecycle beyond the existing indicators-and-warning fragments);
+- finished-product templates (warning note, intelligence summary, read-ahead formats);
+- promotion of OSINT-specific sourcing guidance from the influence collection into `shared/`;
+- navy, marine-corps, air-force, and space-force intelligence namespaces;
+- `frameworks/`, `examples/`, and `docs/` directories once approved content exists;
+- promotion of skills from draft to tested as live-session results land in each collection's `test-expectations.md`.
+
+## License
+
+This repository is licensed under [Creative Commons Attribution 4.0 International](LICENSE) (CC BY 4.0). Nothing here is official doctrine or policy; local authority always governs.
 
 ## Status
 

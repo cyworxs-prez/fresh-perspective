@@ -92,6 +92,8 @@ skills/
     intelligence/
   space-force/
     intelligence/
+  functional/
+    <methodology-collection>/
 
 prompts/
   shared/
@@ -100,9 +102,13 @@ prompts/
   ic/
     icd/
   <service>/intelligence/
+  functional/
+    <methodology-collection>/
 ```
 
 Use `shared/` for methods that are substantially common across communities, such as evidence ledgers, structured analytic techniques, assumption checks, confidence support, and analytic writing. Place a service- or joint-specific implementation in its own namespace when doctrine, terminology, workflow, or required artifact materially differs.
+
+Use `functional/` for methodology collections that apply across communities and are not owned by any one doctrine or service — for example influence and access analysis, homeland indicators and warning, or generalized all-source research. A collection belongs in a community namespace when a specific community's doctrine or policy governs it; it belongs in `functional/` when the method itself is the organizing principle.
 
 Do not create a top-level folder for each publication. Place publication-specific implementation under the relevant namespace, such as `skills/ic/icd/icd-203-analytic-standards/`.
 
@@ -116,7 +122,7 @@ name: stable-machine-readable-name
 summary: One-sentence capability description.
 version: 0.1
 maturity: draft
-namespace: shared | joint | ic | army | navy | marine-corps | air-force | space-force
+namespace: shared | joint | ic | army | navy | marine-corps | air-force | space-force | functional
 human_role: analyst | planner | reviewer | manager
 references:
   - publication or policy title
@@ -155,6 +161,10 @@ Every reusable analytic prompt must:
 - identify the skill and version it implements.
 
 A prompt should not contain hidden mission assumptions, actors, locations, desired conclusions, confidence levels, or dissemination permissions.
+
+### Companion prompts are thin executors
+
+A prompt that implements a skill must not restate the skill's method, schemas, or checklists. It carries only: the `**Implements:**` header naming the skill and version, the model-role framing, a directive to load and follow the skill file for the method, any runtime-specific behavior the skill does not contain, a brief output summary, and the stop-and-approval gate. This keeps one source of truth per capability — edits land in the skill, not in two places. Only standalone prompts with no governing skill (for example the all-source research sequence) carry their full method inline.
 
 ## Quality and test requirements
 

@@ -2,6 +2,13 @@
 name: area-influence-access-baseline
 summary: Build an actor-neutral area influence, access, and freedom-of-maneuver baseline using DIMEFIL, PMESII-PT, ASCOPE, JIPOE, structured analytic techniques, and commander decision support.
 version: 1.0
+maturity: draft
+namespace: functional
+human_role: analyst-or-planner
+references:
+  - Joint Publication 2-01.3, Joint Intelligence Preparation of the Operational Environment
+  - ATP 2-01.3, Intelligence Preparation of the Battlefield
+  - ICD 203, Analytic Standards
 ---
 
 # Area Influence, Access, and Freedom-of-Maneuver Baseline
@@ -139,7 +146,7 @@ Include:
 
 ### Phase 6: Score and prioritize
 
-Use the scoring template in `templates/scoring-model.md`.
+Use the scoring template in `templates/intelligence/influence-scoring-model.md` (repository root).
 
 ### Phase 7: Produce decision support
 
@@ -198,3 +205,27 @@ Before release, confirm:
 - Current leaders, contracts, projects, and dates are revalidated.
 - Visuals match the underlying evidence.
 - Recommendations are lawful, transparent, sovereignty-respecting, and resilience-oriented.
+
+## Activation criteria and non-use cases
+
+Use this skill when a confirmed task profile requires a full area influence-and-access baseline that sequences the companion skills in this collection. Do not use it for a single-question task a companion skill answers alone, as a substitute for command-approved JIPOE or IPB, or for operational planning, targeting, or engagement decisions — it informs them.
+
+## Stop conditions
+
+Stop and ask the analyst when the scoping check cannot be completed, when the authorized source set cannot support a phase and the user asks the model to proceed as if it could, when findings would rest on a single uncorroborated source, or when the requested product would exceed the public-person or lawful-recommendation safeguards.
+
+## Human approval gate
+
+The human analyst adjudicates the research design, phase outputs, key judgments, confidence, and collection priorities before the baseline is released, briefed, or reused. The quality-control checklist above is completed as part of this gate.
+
+## Related assets
+
+- `skills/functional/influence-access-analysis/source-tradecraft/`
+- `skills/functional/influence-access-analysis/environment-mapping/`
+- `skills/functional/influence-access-analysis/actor-network/`
+- `skills/functional/influence-access-analysis/critical-node-analysis/`
+- `skills/functional/influence-access-analysis/indicators-warning/`
+- `skills/functional/influence-access-analysis/commander-reporting/`
+- `skills/shared/intelligence-tradecraft/analyst-interview-and-scope/`
+- `templates/intelligence/influence-analysis-profile.md`
+- `templates/intelligence/influence-scoring-model.md`

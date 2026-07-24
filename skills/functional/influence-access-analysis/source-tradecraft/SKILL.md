@@ -2,6 +2,12 @@
 name: influence-source-tradecraft
 summary: Collect, evaluate, corroborate, and cite evidence for area influence, access, infrastructure, and network assessments.
 version: 1.0
+maturity: draft
+namespace: functional
+human_role: analyst
+references:
+  - ICD 206, Sourcing Requirements for Disseminated Analytic Products
+  - ICS 206-01, public-source citation and reference guidance
 ---
 
 # Influence Source Tradecraft
@@ -54,3 +60,30 @@ Revalidate officeholders, military leaders, ownership, contracts, project status
 ## Minimum corroboration standard
 
 For high-impact judgments seek one primary source plus one independent corroborating source, or two independent high-quality sources with distinct access. If unmet, lower confidence and state the collection gap.
+
+## Activation criteria and non-use cases
+
+Use this skill whenever an influence, access, infrastructure, or network assessment in this collection gathers or evaluates evidence. Do not use it to authorize collection the user is not permitted to perform, to launder single-source claims into corroborated findings, or as a substitute for the shared evidence-and-claim-ledger skill when an organization mandates that schema.
+
+## Quality-control checklist
+
+- [ ] Every material claim has a ledger row with source, dates, and rating.
+- [ ] Independence groups prevent circular corroboration.
+- [ ] What each source proves and does not prove is recorded separately.
+- [ ] Officeholders, contracts, and statuses were revalidated before release.
+- [ ] Unmet corroboration standards lowered confidence and produced a stated gap.
+
+## Stop conditions
+
+Stop and ask the analyst when required source types are unavailable or unauthorized, when the user asks the model to invent, upgrade, or fabricate sourcing, ratings, or corroboration, or when a critical source fails the deception screen and no independent alternative exists.
+
+## Human approval gate
+
+The human analyst approves source ratings, independence groupings, corroboration status, and the research ledger before judgments built on them are drafted or released.
+
+## Related assets
+
+- `skills/shared/intelligence-tradecraft/evidence-and-claim-ledger/`
+- `skills/functional/influence-access-analysis/baseline-assessment/`
+- `skills/ic/icd/icd-206-sourcing-review/`
+- `templates/intelligence/influence-claim-ledger.csv`

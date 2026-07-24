@@ -123,6 +123,6 @@ The automation must stop safely when required sources are unavailable, permissio
 
 ## Current status
 
-No approved runtime staff-work automations are committed yet. The interview-first design prompts are maintained in `prompts/automation-design/`, and approved operating procedures belong in `workflows/` before a runtime package is added here.
+One draft package is committed: `staff-work/inbox-maintenance/`, the runtime half of `workflows/staff-work/inbox-organization-and-maintenance.md`. It is a template — unconfigured and not activated — demonstrating the full chain from builder prompt to workflow to deployable package. The discovery-first design prompts are maintained in `prompts/automation-design/`, and approved operating procedures belong in `workflows/` before a runtime package is added here.
 
 This directory is intentionally retained as the controlled destination for tested and authorized automation artifacts.
