@@ -98,3 +98,5 @@ The responsible analyst and the organization's review chain approve the report, 
 - `skills/shared/intelligence-tradecraft/assessment-language-and-confidence/`
 - `skills/ic/icd/icd-203-analytic-standards/`
 - `templates/intelligence/key-judgment-register.md`
+- `templates/intelligence/warning-note.md`
+- `templates/intelligence/product-read-ahead.md`

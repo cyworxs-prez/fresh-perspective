@@ -156,7 +156,7 @@ Initial skills:
 - assessment language and confidence support;
 - intelligence requirements and collection support (candidate PIR/EEI/SIR/RFI lifecycle without tasking authority).
 
-Companion prompts are under `prompts/shared/intelligence-tradecraft/`, with reusable working artifacts under `templates/intelligence/`.
+Companion prompts are under `prompts/shared/intelligence-tradecraft/`, with reusable working artifacts under `templates/intelligence/` — including finished-product templates (warning note, intelligence summary, product read-ahead) alongside the working matrices and registers.
 
 ### Joint intelligence
 
