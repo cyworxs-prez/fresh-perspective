@@ -248,9 +248,6 @@ Every reusable asset must:
 
 Deferred capabilities, in rough priority order:
 
-- collection management as a dedicated skill (PIR/RFI/ISR request lifecycle beyond the existing indicators-and-warning fragments);
-- finished-product templates (warning note, intelligence summary, read-ahead formats);
-- promotion of OSINT-specific sourcing guidance from the influence collection into `shared/`;
 - navy, marine-corps, air-force, and space-force intelligence namespaces;
 - `frameworks/`, `examples/`, and `docs/` directories once approved content exists;
 - promotion of skills from draft to tested as live-session results land in each collection's `test-expectations.md`.
