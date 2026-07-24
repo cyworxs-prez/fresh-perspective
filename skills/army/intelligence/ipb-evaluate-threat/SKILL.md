@@ -1,6 +1,7 @@
 ---
 name: ipb-evaluate-threat
 summary: Build an evidence-based threat model covering organization, capabilities, doctrine, behavior, dependencies, vulnerabilities, and constraints.
+description: Build an evidence-based threat model covering organization, capabilities, doctrine, behavior, dependencies, vulnerabilities, and constraints.
 version: 0.1
 maturity: draft
 namespace: army

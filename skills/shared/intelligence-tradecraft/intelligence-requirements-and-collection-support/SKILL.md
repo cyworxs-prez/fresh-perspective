@@ -1,6 +1,7 @@
 ---
 name: intelligence-requirements-and-collection-support
 summary: Help a human analyst convert validated gaps into candidate PIRs, EEIs, SIRs, RFIs, and a tracked collection-support matrix without tasking collection.
+description: Help a human analyst convert validated gaps into candidate PIRs, EEIs, SIRs, RFIs, and a tracked collection-support matrix without tasking collection.
 version: 0.1
 maturity: draft
 namespace: shared

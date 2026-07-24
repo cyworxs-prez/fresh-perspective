@@ -1,6 +1,7 @@
 ---
 name: influence-indicators-warning
 summary: Develop decision-linked indicators, warning thresholds, PIRs, SIRs, and collection requirements for influence, access, dependency, and resilience risks.
+description: Develop decision-linked indicators, warning thresholds, PIRs, SIRs, and collection requirements for influence, access, dependency, and resilience risks.
 version: 1.0
 maturity: draft
 namespace: functional

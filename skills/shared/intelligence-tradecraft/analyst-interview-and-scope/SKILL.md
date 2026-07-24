@@ -1,6 +1,7 @@
 ---
 name: analyst-interview-and-scope
 summary: Interview the human analyst and establish a confirmed intelligence task profile before substantive analytic work.
+description: Interview the human analyst and establish a confirmed intelligence task profile before substantive analytic work.
 version: 0.1
 maturity: draft
 namespace: shared

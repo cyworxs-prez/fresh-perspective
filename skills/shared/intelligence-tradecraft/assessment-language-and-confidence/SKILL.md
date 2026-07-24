@@ -1,6 +1,7 @@
 ---
 name: assessment-language-and-confidence
 summary: Help a human analyst express judgments, likelihood, uncertainty, and confidence clearly while preserving evidence traceability and organizational standards.
+description: Help a human analyst express judgments, likelihood, uncertainty, and confidence clearly while preserving evidence traceability and organizational standards.
 version: 0.1
 maturity: draft
 namespace: shared

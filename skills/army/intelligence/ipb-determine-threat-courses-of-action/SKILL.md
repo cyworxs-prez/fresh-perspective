@@ -1,6 +1,7 @@
 ---
 name: ipb-determine-threat-courses-of-action
 summary: Develop, compare, and monitor plausible threat courses of action for Army IPB and decision support.
+description: Develop, compare, and monitor plausible threat courses of action for Army IPB and decision support.
 version: 0.1
 maturity: draft
 namespace: army

@@ -120,6 +120,7 @@ Each skill folder must contain `SKILL.md`. Recommended front matter:
 ---
 name: stable-machine-readable-name
 summary: One-sentence capability description.
+description: Loader-facing trigger description for agent runtimes (normally mirrors summary).
 version: 0.1
 maturity: draft
 namespace: shared | joint | ic | army | navy | marine-corps | air-force | space-force | functional

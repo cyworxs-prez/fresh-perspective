@@ -1,6 +1,7 @@
 ---
 name: icd-206-sourcing-review
 summary: Assist a human analyst or reviewer in evaluating sourcing transparency, traceability, source descriptors, and source summaries for disseminated analytic products.
+description: Assist a human analyst or reviewer in evaluating sourcing transparency, traceability, source descriptors, and source summaries for disseminated analytic products.
 version: 0.1
 maturity: draft
 namespace: ic

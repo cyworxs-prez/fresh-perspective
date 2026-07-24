@@ -1,6 +1,7 @@
 ---
 name: critical-node-site-analysis
 summary: Identify and assess physical, logical, institutional, financial, commercial, and temporal nodes relevant to access, leverage, resilience, and freedom of maneuver.
+description: Identify and assess physical, logical, institutional, financial, commercial, and temporal nodes relevant to access, leverage, resilience, and freedom of maneuver.
 version: 1.0
 maturity: draft
 namespace: functional

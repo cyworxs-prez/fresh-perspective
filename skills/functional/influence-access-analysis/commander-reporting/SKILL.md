@@ -1,6 +1,7 @@
 ---
 name: commander-facing-influence-report
 summary: Convert an area influence and access baseline into a concise, visual, decision-oriented report with defensible judgments and collection priorities.
+description: Convert an area influence and access baseline into a concise, visual, decision-oriented report with defensible judgments and collection priorities.
 version: 1.0
 maturity: draft
 namespace: functional
