@@ -2,6 +2,12 @@
 name: pmesii-ascope-jipoe-mapping
 summary: Map an operational or policy environment using PMESII-PT, ASCOPE, and a concise JIPOE overlay.
 version: 1.0
+maturity: draft
+namespace: functional
+human_role: analyst-or-planner
+references:
+  - ATP 2-01.3, Intelligence Preparation of the Battlefield
+  - Joint Publication 2-01.3, Joint Intelligence Preparation of the Operational Environment
 ---
 
 # PMESII-PT × ASCOPE × JIPOE Mapping
@@ -57,3 +63,30 @@ Produce:
 - Critical-factor assessment.
 - Temporal decision-window timeline.
 - JIPOE deductions tied to commander, executive, or policy decisions.
+
+## Activation criteria and non-use cases
+
+Use this skill when a confirmed task profile requires an environmental baseline for an influence, access, resilience, or freedom-of-maneuver assessment. Do not use it as a substitute for command-approved JIPOE or IPB products, formal geospatial or weather support, or the Joint and Army skills that implement those doctrinal processes under their own namespaces.
+
+## Quality-control checklist
+
+- [ ] Every matrix entry supports the required analytic deduction, not description alone.
+- [ ] Dimensions irrelevant to the decision are omitted with rationale rather than padded.
+- [ ] Sources, dates, and information cutoff are recorded for material entries.
+- [ ] Deductions separate environmental conditions from actor-dependent effects.
+- [ ] Gaps are stated where a dimension could not be assessed from authorized sources.
+
+## Stop conditions
+
+Stop and ask the analyst when the scoping check cannot be completed, when authorized sources cannot support a required dimension and the user asks the model to fill it, or when the mapping is being used to justify conclusions the evidence does not support.
+
+## Human approval gate
+
+The human analyst approves the baseline, matrix, and deductions before they feed pathway analysis, node analysis, indicators, or reporting.
+
+## Related assets
+
+- `skills/functional/influence-access-analysis/baseline-assessment/`
+- `skills/functional/influence-access-analysis/critical-node-analysis/`
+- `skills/joint/intelligence/jipoe-scope-and-operational-environment/`
+- `skills/army/intelligence/ipb-define-operational-environment/`

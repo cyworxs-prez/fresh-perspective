@@ -2,6 +2,12 @@
 name: homeland-strategic-warning
 summary: Build a whole-of-government U.S. Homeland indicators-and-warning assessment by correlating atypical civilian, regulatory, commercial, infrastructure, and security observations into decision-linked strategic warning.
 version: 1.0
+maturity: draft
+namespace: functional
+human_role: analyst-or-planner
+references:
+  - ICD 203, Analytic Standards
+  - Joint Publication 2-0, Joint Intelligence
 ---
 
 # Homeland Strategic Warning
@@ -264,3 +270,23 @@ Before finalizing, confirm that:
 - the product identifies the fusion and reporting owner;
 - confidence and severity are separate;
 - the user can see which missing information would most change the judgment.
+
+## Activation criteria and non-use cases
+
+Use this skill when a confirmed task profile requires strategic warning built from lawful observations distributed across U.S. Homeland civilian, regulatory, commercial, and security organizations. Do not use it for foreign-theater warning problems better served by the joint or influence-access skills, for law-enforcement investigative decisions, for authorities determinations that require counsel, or to justify collection or data repurposing that has not had legal review.
+
+## Stop conditions
+
+Stop and ask the analyst when the scoping interview cannot resolve actor, scenario, or decision supported; when a warning-level change is requested from a single non-diagnostic indicator; when required data is legally restricted and the user asks the model to proceed as if it were available; or when a proposed collaboration mechanism requires authority the assessment cannot establish.
+
+## Human approval gate
+
+The responsible analyst and the organization's review chain adjudicate every warning level, indicator, agency characterization, and recommendation before the assessment is briefed, disseminated, or used to initiate referral, escalation, or operational action. The quality-control checklist above is completed as part of this gate.
+
+## Related assets
+
+- `skills/functional/influence-access-analysis/indicators-warning/`
+- `skills/shared/intelligence-tradecraft/analyst-interview-and-scope/`
+- `skills/shared/intelligence-tradecraft/evidence-and-claim-ledger/`
+- `templates/intelligence/indicator-register.csv`
+- `prompts/functional/research-analysis/all-source/10-indicators-warning.md`

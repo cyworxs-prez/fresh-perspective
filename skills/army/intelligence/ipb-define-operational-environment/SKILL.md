@@ -20,6 +20,13 @@ Assist a human analyst in bounding the operational environment and identifying t
 
 Use for Army IPB, intelligence support to MDMP, operational planning, warning, targeting support, protection, sustainment, or civil considerations when the environment is not yet explicitly bounded.
 
+## Do not use for
+
+- command-approved mission analysis or operational design decisions;
+- formal geospatial, weather, engineer, or legal determinations;
+- the environmental-effects, threat-evaluation, or threat-COA analysis performed by the later IPB skills;
+- joint-level problems better served by the JIPOE skills under `skills/joint/intelligence/`.
+
 ## Mandatory interview
 
 Confirm:
@@ -55,6 +62,10 @@ Restate the task profile and obtain confirmation before analysis.
 ## Evidence rules
 
 Every material statement must link to authorized evidence or be labeled as an assumption or analytic inference. Do not fabricate boundaries, reporting, collection, or environmental conditions.
+
+## Uncertainty and alternatives
+
+Where the decision-relevance of a characteristic, the placement of a boundary, or the relevant-actor set is contested, present the competing options with their planning consequences rather than silently selecting one. Record the analyst's confidence and rationale for boundary and significant-characteristic decisions that later IPB steps will inherit.
 
 ## Output
 

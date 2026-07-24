@@ -2,6 +2,11 @@
 name: actor-relationship-effect-analysis
 summary: Identify public actors, organizations, relationships, influence stages, and operational effects without conflating contact with malign influence.
 version: 1.0
+maturity: draft
+namespace: functional
+human_role: analyst
+references:
+  - ICD 203, Analytic Standards
 ---
 
 # Actor–Relationship–Effect Analysis
@@ -47,3 +52,31 @@ Produce a node list, edge list, network diagram, brokerage assessment when suppo
 - What trigger could activate leverage?
 - What observable behavior would demonstrate effect?
 - Which alternative explanations remain plausible?
+
+## Activation criteria and non-use cases
+
+Use this skill when a confirmed task profile requires mapping who can enable, constrain, or shape access, decisions, or critical systems in an area of analysis. Do not use it to profile private individuals outside a public role, to assert influence without an evidenced mechanism, or as a substitute for counterintelligence, law-enforcement, or security-clearance processes.
+
+## Quality-control checklist
+
+- [ ] Every tracked actor has a documented public role and decision relevance.
+- [ ] Every relationship uses a specific mechanism label, not "influence."
+- [ ] Influence stages are supported by evidence, not inferred from contact alone.
+- [ ] Alternative explanations are recorded for material relationships.
+- [ ] Weakly documented relationships are labeled as such, not upgraded.
+
+## Stop conditions
+
+Stop and ask the analyst when the scoping check cannot be completed, when the evidence base for a material relationship is absent and the user asks the model to fill it, when a request would require inferring loyalty, corruption, or foreign direction without credible evidence, or when named-person analysis would exceed the public-role standard.
+
+## Human approval gate
+
+The human analyst adjudicates every node, edge, influence-stage assignment, and brokerage judgment before the network products are used in an assessment or briefed.
+
+## Related assets
+
+- `skills/functional/influence-access-analysis/baseline-assessment/`
+- `skills/functional/influence-access-analysis/source-tradecraft/`
+- `skills/functional/influence-access-analysis/critical-node-analysis/`
+- `templates/intelligence/actor-edge-list.csv`
+- `skills/shared/intelligence-tradecraft/evidence-and-claim-ledger/`
