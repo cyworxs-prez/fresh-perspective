@@ -1,5 +1,7 @@
 # Inbox Triage Workflow
 
+**Maturity:** Draft template. Configure it for a specific environment with `prompts/automation-design/morning-email-triage-and-brief-builder.md` (discovery-first). For structural reorganization and recurring upkeep, see `inbox-organization-and-maintenance.md` — triage handles the daily flow; organization handles the structure it flows into.
+
 ## Purpose
 Reduce inbox noise, surface messages requiring attention, prepare draft responses, and preserve an auditable record of actions without automatically committing the user to external communications.
 
