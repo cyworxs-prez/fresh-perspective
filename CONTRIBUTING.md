@@ -162,6 +162,10 @@ Every reusable analytic prompt must:
 
 A prompt should not contain hidden mission assumptions, actors, locations, desired conclusions, confidence levels, or dissemination permissions.
 
+### Companion prompts are thin executors
+
+A prompt that implements a skill must not restate the skill's method, schemas, or checklists. It carries only: the `**Implements:**` header naming the skill and version, the model-role framing, a directive to load and follow the skill file for the method, any runtime-specific behavior the skill does not contain, a brief output summary, and the stop-and-approval gate. This keeps one source of truth per capability — edits land in the skill, not in two places. Only standalone prompts with no governing skill (for example the all-source research sequence) carry their full method inline.
+
 ## Quality and test requirements
 
 Before merging a new or materially revised asset, test at least:
