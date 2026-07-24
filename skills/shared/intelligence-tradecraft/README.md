@@ -16,6 +16,7 @@ Every skill begins with an interview. The assistant must confirm the decision co
 - `evidence-and-claim-ledger/` — decompose claims and preserve evidence traceability.
 - `structured-analytic-techniques/` — select and facilitate an appropriate structured technique.
 - `assessment-language-and-confidence/` — help the analyst express likelihood, uncertainty, and confidence consistently.
+- `intelligence-requirements-and-collection-support/` — convert validated gaps into candidate PIRs, EEIs, SIRs, RFIs, and a tracked collection-support matrix without tasking collection.
 
 ## Recommended sequence
 

@@ -153,7 +153,8 @@ Initial skills:
 - analyst interview and task scoping;
 - evidence and claim ledger;
 - structured analytic technique facilitation;
-- assessment language and confidence support.
+- assessment language and confidence support;
+- intelligence requirements and collection support (candidate PIR/EEI/SIR/RFI lifecycle without tasking authority).
 
 Companion prompts are under `prompts/shared/intelligence-tradecraft/`, with reusable working artifacts under `templates/intelligence/`.
 
