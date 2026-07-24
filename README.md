@@ -1,175 +1,223 @@
 # Fresh Perspective
 
-A reusable library of AI skills, model-ready prompts, operating workflows, and automation specifications for analysis, staff work, research, reporting, and knowledge work.
+A reusable library of AI skills, model-ready prompts, operating workflows, automation specifications, templates, and reference material for analysis, planning, staff work, research, reporting, and knowledge work.
 
-Fresh Perspective is intended to help a user move from an informal request to a repeatable, reviewable, and eventually automated way of working. The repository separates **how a model should reason**, **how a user should configure a task**, **how the work should be performed**, and **how the task should run automatically**.
+Fresh Perspective helps a human user move from an informal request to a repeatable, reviewable, and eventually automatable way of working. The repository separates **reusable capability**, **model interaction**, **approved operating procedure**, and **runtime implementation**.
+
+## Human-led operating philosophy
+
+The model supplements a trained analyst, planner, researcher, reviewer, or staff officer. It does not become the accountable analyst.
+
+Every substantive analytic asset must:
+
+- interview the user before beginning;
+- confirm the mission, decision, intelligence question, audience, scope, timeframe, actors, source set, handling restrictions, deliverable, and approval authority;
+- use only authorized and identified information;
+- prohibit fabricated reporting, citations, doctrine, collection, confidence, and judgments;
+- distinguish reported information, source characterization, inference, assumption, judgment, likelihood, confidence, and implication;
+- expose contradictory evidence, alternatives, uncertainty, and gaps;
+- require human adjudication before finalization or consequential action.
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) for mandatory contribution and quality requirements.
 
 ## Core operating model
 
-Fresh Perspective uses four primary asset types:
-
 | Asset | Purpose | Typical use |
 |---|---|---|
-| **Skill** | Defines reusable capability, tradecraft, quality standards, constraints, and expected outputs. | Give an LLM or agent a reliable way to perform a class of work. |
-| **Prompt** | Provides model-ready instructions for a bounded task or for interviewing a user and designing a solution. | Start a task, configure an automation, or guide a model through a specific interaction. |
-| **Workflow** | Documents the approved human-and-machine operating procedure from trigger to completed product. | Explain who does what, in what order, using which sources, with which review gates. |
-| **Automation** | Defines the deployable runtime behavior: trigger, schedule, execution prompt, permissions, outputs, logging, retries, and rollback. | Run an approved workflow through a desktop agent, scheduler, workflow engine, or orchestration platform. |
+| **Skill** | Defines reusable capability, tradecraft, decision points, constraints, quality standards, and expected outputs. | Give an LLM or agent a reliable method for assisting a human with a class of work. |
+| **Prompt** | Provides model-ready instructions for a bounded interaction or task. | Interview a user, execute a skill, design an automation, or perform a diagnostic review. |
+| **Workflow** | Documents the approved human-and-machine operating procedure from trigger to completed product. | Explain who does what, in what order, using which sources and review gates. |
+| **Automation** | Defines deployable runtime behavior: trigger, schedule, execution prompt, permissions, outputs, logging, retries, and rollback. | Run an approved workflow through an agent, scheduler, workflow engine, or orchestration platform. |
+| **Template** | Provides a reusable working artifact or output schema. | Preserve traceability and make repeated execution consistent. |
 
 ### Why prompts, workflows, and automations remain separate
 
 These directories are intentionally not collapsed.
 
-- A **builder prompt** interviews the user and proposes a design.
+- A **builder or execution prompt** controls a model interaction.
 - A **workflow** records the reviewed and approved process in plain language.
 - An **automation** records the machine-executable or platform-translatable implementation.
 
-Keeping them separate prevents a draft prompt from being mistaken for an approved operating procedure or an active automation. It also supports version control, human review, testing, rollback, and platform portability.
+Keeping them separate prevents a draft prompt from being mistaken for an approved operating procedure or active automation. It also supports version control, testing, review, rollback, and platform portability.
 
 ## Repository structure
+
+The top level describes the asset type. Subfolders describe the governing community, service, doctrine, domain, or shared methodology.
 
 ```text
 skills/
   README.md
-  <collection-name>/
-    README.md
-    <skill-name>/SKILL.md
-    templates/
+  shared/
+    intelligence-tradecraft/
+      <skill-name>/SKILL.md
+  joint/
+    intelligence/
+      <skill-name>/SKILL.md
+  ic/
+    icd/
+      <directive-or-skill-name>/SKILL.md
+  army/
+    intelligence/
+  navy/
+    intelligence/
+  marine-corps/
+    intelligence/
+  air-force/
+    intelligence/
+  space-force/
+    intelligence/
+  <other-collection>/
 
 prompts/
   README.md
-  <domain-or-function>/
-    README.md
-    <prompt>.md
+  shared/
+    intelligence-tradecraft/
+  joint/
+    intelligence/
+  ic/
+    icd/
+  <service>/
+    intelligence/
+  automation-design/
 
 workflows/
   README.md
   <domain-or-function>/
-    <workflow>.md
 
-automations/
+  automations/
   README.md
   <domain-or-function>/
     <automation>.yaml
     <runtime-prompt>.md
     <test-cases>.md
 
-frameworks/
-  <framework-name>/
-
 templates/
+  intelligence/
+  <other-domain>/
+
+frameworks/
 examples/
 docs/
 ```
 
-Directories may remain empty until an approved artifact exists. For example, an automation-builder prompt may exist before the corresponding automation is designed, tested, and authorized for use.
+A publication is normally a reference inside a functional skill rather than a top-level folder. Publication-specific implementation belongs under the governing namespace, such as `skills/ic/icd/icd-203-analytic-standards/`.
+
+Use `shared/` for methods that are substantially common across communities, including analyst interviews, evidence ledgers, structured analytic techniques, assumptions, confidence support, and analytic writing. Create a Joint or Service-specific version when doctrine, terminology, workflow, or required artifacts materially differ.
+
+Directories may remain empty until an approved artifact exists. A builder prompt may exist before the corresponding workflow or automation is designed, tested, and authorized.
 
 ## Day-to-day integration
 
-### Use a skill for complex work
+### Human-led intelligence analysis
 
-Use a skill when the task requires repeatable tradecraft, quality control, or a defined analytical method.
+Recommended sequence:
 
-Example operating sequence:
+1. Run `prompts/shared/intelligence-tradecraft/interview-and-scope.md`.
+2. Confirm the analysis profile and record the information cutoff.
+3. Build the claim-and-evidence ledger using only authorized sources.
+4. Select the relevant Joint, Service, IC, or functional skill.
+5. Apply structured analytic techniques when they address a defined uncertainty or failure mode.
+6. Draft key judgments with the organization's approved estimative-language convention.
+7. Apply applicable sourcing and analytic-standard reviews.
+8. Present every material judgment, confidence level, assumption, indicator, and gap for human adjudication.
+9. Complete classification, disclosure, supervisory, and product-line review outside the model where required.
+10. Save approved working artifacts and lessons for the next update.
 
-1. Select the relevant skill collection.
-2. Complete its required scope or configuration profile.
-3. Provide the model access to the relevant sources.
-4. Run the skills in the recommended sequence.
-5. Review assumptions, evidence, confidence, and unresolved gaps.
-6. Produce the final artifact using the reporting or writing skill.
-7. Save reusable ledgers, templates, and lessons learned for the next iteration.
-
-### Use an automation-builder prompt for recurring staff work
-
-Use a builder prompt when the work should eventually run on a schedule, event, or condition.
+### Recurring staff work and automation design
 
 1. Open the relevant prompt in `prompts/automation-design/`.
 2. Give it to the user's authenticated desktop agent or LLM.
-3. Let the agent interview the user about purpose, scope, schedule, sources, exclusions, output format, permissions, and approval boundaries.
+3. Let the agent interview the user about purpose, scope, sources, schedule, exclusions, permissions, output, and approval boundaries.
 4. Review the proposed workflow, automation specification, runtime prompt, approval matrix, and test plan.
-5. Save the approved plain-language process under `workflows/`.
+5. Save the approved process under `workflows/`.
 6. Save the deployable configuration under `automations/`.
 7. Run a historical or non-destructive dry test.
 8. Correct false positives, omissions, duplicate behavior, and unsafe actions.
 9. Require explicit user approval before activation.
-10. Review the automation periodically and whenever the user's role, systems, permissions, or reporting requirements change.
-
-### Example: morning email triage
-
-A user would run `prompts/automation-design/morning-email-triage-and-brief-builder.md` with their desktop agent. The agent would interview the user, inspect only authorized resources, and produce:
-
-- a proposed inbox-triage workflow;
-- a schedule and lookback window;
-- priority and escalation rules;
-- automatic-action and approval boundaries;
-- a runtime execution prompt;
-- an output format for the morning brief;
-- test cases and rollback instructions.
-
-After review, the approved process belongs in `workflows/staff-work/`, while the platform-specific or portable runtime specification belongs in `automations/staff-work/`.
+10. Review periodically and when roles, systems, permissions, or requirements change.
 
 ## Current collections
 
-### Analysis skills
+### Shared intelligence tradecraft
+
+`skills/shared/intelligence-tradecraft/`
+
+Initial skills:
+
+- analyst interview and task scoping;
+- evidence and claim ledger;
+- structured analytic technique facilitation;
+- assessment language and confidence support.
+
+Companion prompts are under `prompts/shared/intelligence-tradecraft/`, with reusable working artifacts under `templates/intelligence/`.
+
+### Joint intelligence
+
+`skills/joint/intelligence/`
+
+Initial JIPOE skills support:
+
+- scope, operational-environment definition, significant characteristics, and environmental effects;
+- actor, capability, course-of-action, indicator, and gap analysis.
+
+Companion prompts are under `prompts/joint/intelligence/`.
+
+### Intelligence Community directives
+
+`skills/ic/icd/`
+
+Initial directive-based skills support:
+
+- ICD 203 analytic-standards review;
+- ICD 206 sourcing and traceability review.
+
+Companion prompts are under `prompts/ic/icd/`. These are diagnostic aids, not organizational compliance certifications.
+
+### Influence and access analysis
 
 `skills/influence-access-analysis/`
 
 Actor-neutral skills for area baselining, source tradecraft, environmental mapping, actor-network analysis, critical-node analysis, indicators and warning, analytic integration, and commander or executive reporting.
 
-### Automation-design prompts
+### Automation design
 
 `prompts/automation-design/`
 
-Interview-first prompts for configuring recurring staff work on an already authenticated desktop agent, including email triage, daily and periodic reporting, meeting support, suspense tracking, and records-safe inbox cleanup.
-
-### Staff-work workflows
-
-`workflows/staff-work/`
-
-Approved, plain-language operating procedures. This section should contain only workflows that have been reviewed and accepted, not preliminary builder output.
-
-### Staff-work automations
-
-`automations/staff-work/`
-
-Deployable automation packages. This section should contain only tested specifications with schedules, runtime prompts, permissions, approval gates, audit behavior, failure handling, and disable instructions.
+Interview-first prompts for configuring recurring staff work on an already authenticated desktop agent, including email triage, periodic reporting, meeting support, suspense tracking, and records-safe inbox cleanup.
 
 ## Governance and safety
 
-Every reusable asset should follow these rules:
+Every reusable asset must:
 
-- Do not inherit a country, target actor, partner, mission, mailbox, folder, audience, or schedule from prior work without confirmation.
-- Ask for missing information when it would materially change the result.
-- Separate fact, inference, assumption, severity, confidence, and unresolved questions.
-- Use authoritative sources and identify the system of record.
-- Preserve traceability from output back to source material.
-- Define what the agent may do automatically and what requires approval.
-- Require explicit authority for sending, deleting, publishing, approving, accepting commitments, or changing authoritative records.
-- Design recurring operations for idempotency so repeated runs do not create duplicate tasks, drafts, reports, or notifications.
-- Record unavailable sources, partial completion, and failures rather than silently omitting them.
-- Include test, disable, rollback, retention, and audit instructions for every automation.
-- Sanitize reusable assets of prior clients, countries, adversaries, reports, personal identifiers, and environment-specific details unless they are intentionally part of a case-specific example.
+- remain human-led and interview-first;
+- avoid inheriting a country, actor, mission, audience, mailbox, source set, schedule, or desired conclusion without confirmation;
+- preserve traceability from outputs to authorized evidence;
+- record unavailable sources, partial completion, and failures;
+- distinguish mandatory policy, authoritative doctrine, local requirements, and recommended tradecraft;
+- treat current command, agency, product-line, security, disclosure, legal, privacy, and supervisory guidance as controlling;
+- define what the model may do automatically and what requires approval;
+- require explicit authority for sending, deleting, publishing, disseminating, tasking, approving, accepting commitments, or changing authoritative records;
+- include test, disable, rollback, retention, and audit instructions for automations;
+- remove prior-client, country, adversary, report, personal, and environment-specific details from reusable assets unless they are intentional examples.
 
 ## Contribution workflow
 
-1. Determine whether the new asset is a skill, prompt, workflow, automation, framework, template, or example.
-2. Start from the closest existing README or template.
-3. Remove environment-specific or case-specific details.
-4. Add scope questions, assumptions, source requirements, quality checks, and approval boundaries.
-5. Add a plain-language usage example.
-6. Link related skills, prompts, workflows, and automations.
-7. Test with at least one normal case, one exception case, and one failure case.
-8. Commit only artifacts that are complete enough for their declared maturity level.
+1. Read [`CONTRIBUTING.md`](CONTRIBUTING.md).
+2. Determine the asset type and governing namespace.
+3. Start from the closest skill, prompt, or template.
+4. Add the mandatory interview, source boundaries, evidence rules, stop conditions, quality checks, and human approval gate.
+5. Distinguish doctrine or policy requirements from repository recommendations.
+6. Link related skills, prompts, workflows, automations, templates, and references.
+7. Test normal, ambiguous, evidence-gap, contradictory, and boundary cases.
+8. Commit only artifacts that meet their declared maturity level.
 
 ## Maturity labels
 
-Assets should describe their maturity in the file or collection README:
-
-- **Draft:** concept or initial prompt; not yet validated.
-- **Tested:** exercised against representative inputs.
+- **Draft:** concept or initial implementation; not yet validated.
+- **Tested:** exercised against representative normal and failure cases.
 - **Operational:** approved for recurring use in a defined environment.
 - **Reference:** stable guidance or template intended for reuse.
 
 ## Status
 
-Fresh Perspective is an evolving library. Current work is focused on generalized analysis skills and interview-driven staff-work automation design. Workflows and automations will grow as specific processes are configured, tested, approved, and committed.
+Fresh Perspective is an evolving library. Current work is establishing a human-led, doctrine-grounded intelligence tradecraft foundation while retaining the repository's existing generalized analysis and interview-driven automation-design capabilities.
