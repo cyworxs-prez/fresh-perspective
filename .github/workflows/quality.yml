@@ -1,0 +1,57 @@
+name: quality
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  internal-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check internal repository references
+        shell: bash
+        run: |
+          set -euo pipefail
+          fail=0
+          # Every repo-rooted path mentioned in backticks must exist.
+          while IFS=: read -r file match; do
+            path="${match%\`}"; path="${path#\`}"
+            path="${path%/}"
+            [[ "$path" == *"<"* ]] && continue   # placeholder paths like <skill-name>
+            if [[ ! -e "$path" ]]; then
+              echo "::error file=$file::dangling reference: $path"
+              fail=1
+            fi
+          done < <(grep -rHoE '`(skills|prompts|workflows|automations|templates)/[^`*]+`' --include='*.md' . | sed 's|^\./||')
+          exit $fail
+
+  markdown-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check relative markdown links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --no-progress --include-fragments './**/*.md'
+          fail: true
+
+  skill-front-matter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Require complete SKILL.md front matter
+        shell: bash
+        run: |
+          set -euo pipefail
+          fail=0
+          for f in $(find skills -name SKILL.md); do
+            for field in name summary version maturity namespace human_role references; do
+              if ! awk '/^---$/{n++} n==1' "$f" | grep -q "^${field}:"; then
+                echo "::error file=$f::missing front-matter field: $field"
+                fail=1
+              fi
+            done
+          done
+          exit $fail

@@ -242,6 +242,21 @@ Every reusable asset must:
 - **Operational:** approved for recurring use in a defined environment.
 - **Reference:** stable guidance or template intended for reuse.
 
+## Roadmap
+
+Deferred capabilities, in rough priority order:
+
+- collection management as a dedicated skill (PIR/RFI/ISR request lifecycle beyond the existing indicators-and-warning fragments);
+- finished-product templates (warning note, intelligence summary, read-ahead formats);
+- promotion of OSINT-specific sourcing guidance from the influence collection into `shared/`;
+- navy, marine-corps, air-force, and space-force intelligence namespaces;
+- `frameworks/`, `examples/`, and `docs/` directories once approved content exists;
+- promotion of skills from draft to tested as live-session results land in each collection's `test-expectations.md`.
+
+## License
+
+This repository is licensed under [Creative Commons Attribution 4.0 International](LICENSE) (CC BY 4.0). Nothing here is official doctrine or policy; local authority always governs.
+
 ## Status
 
 Fresh Perspective is an evolving library. Current work is establishing a human-led, doctrine-grounded intelligence tradecraft foundation while retaining the repository's existing generalized analysis and interview-driven automation-design capabilities.
