@@ -1,6 +1,7 @@
 ---
 name: public-source-evaluation
 summary: Evaluate publicly and commercially available sources — hierarchy, decomposition, ratings, independence, deception screening, revalidation, and corroboration — for any analytic task.
+description: Evaluate publicly and commercially available sources — hierarchy, decomposition, ratings, independence, deception screening, revalidation, and corroboration — for any analytic task.
 version: 0.1
 maturity: draft
 namespace: shared

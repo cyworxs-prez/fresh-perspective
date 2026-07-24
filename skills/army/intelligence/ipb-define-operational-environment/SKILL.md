@@ -1,6 +1,7 @@
 ---
 name: ipb-define-operational-environment
 summary: Define the operational environment, area of operations, area of interest, and intelligence problem for Army IPB.
+description: Define the operational environment, area of operations, area of interest, and intelligence problem for Army IPB.
 version: 0.1
 maturity: draft
 namespace: army

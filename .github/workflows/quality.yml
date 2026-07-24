@@ -47,7 +47,7 @@ jobs:
           set -euo pipefail
           fail=0
           for f in $(find skills -name SKILL.md); do
-            for field in name summary version maturity namespace human_role references; do
+            for field in name summary description version maturity namespace human_role references; do
               if ! awk '/^---$/{n++} n==1' "$f" | grep -q "^${field}:"; then
                 echo "::error file=$f::missing front-matter field: $field"
                 fail=1

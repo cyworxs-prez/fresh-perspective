@@ -1,6 +1,7 @@
 ---
 name: influence-source-tradecraft
 summary: Domain overlay applying shared public-source evaluation to influence, access, infrastructure, and network assessments.
+description: Domain overlay applying shared public-source evaluation to influence, access, infrastructure, and network assessments.
 version: 1.1
 maturity: draft
 namespace: functional

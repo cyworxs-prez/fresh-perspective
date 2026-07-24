@@ -1,6 +1,7 @@
 ---
 name: area-influence-access-baseline
 summary: Build an actor-neutral area influence, access, and freedom-of-maneuver baseline using DIMEFIL, PMESII-PT, ASCOPE, JIPOE, structured analytic techniques, and commander decision support.
+description: Build an actor-neutral area influence, access, and freedom-of-maneuver baseline using DIMEFIL, PMESII-PT, ASCOPE, JIPOE, structured analytic techniques, and commander decision support.
 version: 1.0
 maturity: draft
 namespace: functional

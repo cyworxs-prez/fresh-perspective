@@ -1,6 +1,7 @@
 ---
 name: homeland-strategic-warning
 summary: Build a whole-of-government U.S. Homeland indicators-and-warning assessment by correlating atypical civilian, regulatory, commercial, infrastructure, and security observations into decision-linked strategic warning.
+description: Build a whole-of-government U.S. Homeland indicators-and-warning assessment by correlating atypical civilian, regulatory, commercial, infrastructure, and security observations into decision-linked strategic warning.
 version: 1.0
 maturity: draft
 namespace: functional

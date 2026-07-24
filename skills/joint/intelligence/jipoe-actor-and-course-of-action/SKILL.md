@@ -1,6 +1,7 @@
 ---
 name: jipoe-actor-and-course-of-action
 summary: Assist a joint intelligence analyst in evaluating relevant actors, capabilities, limitations, objectives, potential courses of action, and indicators.
+description: Assist a joint intelligence analyst in evaluating relevant actors, capabilities, limitations, objectives, potential courses of action, and indicators.
 version: 0.1
 maturity: draft
 namespace: joint

@@ -1,6 +1,7 @@
 ---
 name: evidence-and-claim-ledger
 summary: Build and maintain a traceable ledger connecting reported information, source characterization, assumptions, inferences, and analytic judgments.
+description: Build and maintain a traceable ledger connecting reported information, source characterization, assumptions, inferences, and analytic judgments.
 version: 0.1
 maturity: draft
 namespace: shared

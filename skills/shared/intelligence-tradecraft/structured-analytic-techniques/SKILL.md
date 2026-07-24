@@ -1,6 +1,7 @@
 ---
 name: structured-analytic-techniques
 summary: Help the human analyst select, configure, execute, and document structured analytic techniques without outsourcing judgment to the model.
+description: Help the human analyst select, configure, execute, and document structured analytic techniques without outsourcing judgment to the model.
 version: 0.1
 maturity: draft
 namespace: shared

@@ -1,6 +1,7 @@
 ---
 name: icd-203-analytic-standards-review
 summary: Assist a human analyst or reviewer in evaluating an analytic product against publicly releasable ICD 203 analytic and tradecraft standards.
+description: Assist a human analyst or reviewer in evaluating an analytic product against publicly releasable ICD 203 analytic and tradecraft standards.
 version: 0.1
 maturity: draft
 namespace: ic

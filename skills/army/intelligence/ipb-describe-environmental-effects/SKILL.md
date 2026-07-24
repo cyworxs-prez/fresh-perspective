@@ -1,6 +1,7 @@
 ---
 name: ipb-describe-environmental-effects
 summary: Analyze how terrain, weather, civil considerations, infrastructure, information, and cross-domain conditions affect operations.
+description: Analyze how terrain, weather, civil considerations, infrastructure, information, and cross-domain conditions affect operations.
 version: 0.1
 maturity: draft
 namespace: army

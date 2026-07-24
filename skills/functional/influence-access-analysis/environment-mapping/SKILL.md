@@ -1,6 +1,7 @@
 ---
 name: pmesii-ascope-jipoe-mapping
 summary: Map an operational or policy environment using PMESII-PT, ASCOPE, and a concise JIPOE overlay.
+description: Map an operational or policy environment using PMESII-PT, ASCOPE, and a concise JIPOE overlay.
 version: 1.0
 maturity: draft
 namespace: functional

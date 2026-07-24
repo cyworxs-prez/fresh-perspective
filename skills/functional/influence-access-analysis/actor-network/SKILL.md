@@ -1,6 +1,7 @@
 ---
 name: actor-relationship-effect-analysis
 summary: Identify public actors, organizations, relationships, influence stages, and operational effects without conflating contact with malign influence.
+description: Identify public actors, organizations, relationships, influence stages, and operational effects without conflating contact with malign influence.
 version: 1.0
 maturity: draft
 namespace: functional

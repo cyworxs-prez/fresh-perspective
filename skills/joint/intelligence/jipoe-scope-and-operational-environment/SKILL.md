@@ -1,6 +1,7 @@
 ---
 name: jipoe-scope-and-operational-environment
 summary: Assist a joint intelligence analyst in defining the JIPOE problem, operational environment, significant characteristics, and effects on operations and decisions.
+description: Assist a joint intelligence analyst in defining the JIPOE problem, operational environment, significant characteristics, and effects on operations and decisions.
 version: 0.1
 maturity: draft
 namespace: joint
