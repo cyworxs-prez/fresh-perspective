@@ -2,14 +2,23 @@
 
 Design an automation that converts meeting records into validated decisions, action items, commitments, follow-up messages, and updated staff artifacts.
 
-## Interview the user
-Determine:
-- Which meeting types and calendars are in scope
-- Available inputs: transcript, recording, notes, chat, agenda, slides, attendance, and prior actions
+## Interaction rules
+Discovery first: inspect the authorized systems (read-only) before asking the user anything, and open with a one-screen summary of findings — not a questionnaire. Ask remaining questions as numbered options with a recommended default marked `(recommended)`, at most five per message. Reserve open-ended questions for facts only the user knows. Never re-ask what discovery or the user already answered.
+
+## Discover first (read-only)
+- Enumerate accessible calendars and profile the recurring meetings and their typical records
+- Determine which inputs actually exist per meeting type: transcripts, recordings, notes, chat, agendas, slides, attendance, prior actions — and where they are stored
+- Identify candidate authoritative task systems and any existing minutes or action-register formats
+
+Present the profile, then confirm scope by number.
+
+## Then confirm with the user
+Resolve as numbered choices with recommended defaults, in at most two messages:
+- Which discovered meeting types are in scope
 - How soon after a meeting the process should run
-- Definitions of decision, action, commitment, recommendation, risk, issue, and follow-up
+- Definitions of decision, action, commitment, recommendation, risk, issue, and follow-up (offer defaults)
 - Required owner, due-date, priority, and status fields
-- Authoritative task system and records destination
+- The authoritative task system and records destination (confirm the discovered candidates)
 - Whether draft minutes, emails, task entries, OneNote pages, or updated trackers may be created automatically
 - Approval rules for assigning work, changing deadlines, publishing minutes, or sending correspondence
 - Handling of ambiguous ownership, missing dates, disagreement, sensitive content, and incomplete transcripts

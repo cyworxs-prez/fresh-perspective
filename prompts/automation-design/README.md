@@ -1,6 +1,6 @@
 # Automation Design Prompts
 
-Interview-first, model-ready prompts for helping a user design, configure, test, document, and approve recurring work on a desktop agent that already has authenticated access to the user's email, calendar, files, Microsoft Office applications, task systems, and other identity-bound resources.
+Discovery-first, model-ready prompts for helping a user design, configure, test, document, and approve recurring work on a desktop agent that already has authenticated access to the user's email, calendar, files, Microsoft Office applications, task systems, and other identity-bound resources.
 
 **Maturity:** Reference design prompts. Individual generated workflows and automations remain drafts until reviewed and tested in the user's environment.
 
@@ -16,11 +16,23 @@ These prompts do not assume a specific orchestration platform. The agent should 
 - The user remains the approval authority for consequential or irreversible actions unless a narrow preauthorization is documented.
 - Builder prompts design and document automations; they do not activate them without explicit approval.
 
+## Discovery-first design method
+
+Every builder follows the same interaction contract, which favors showing over asking:
+
+1. **Discover before asking.** The agent inspects the authorized environment read-only — mailboxes, folder trees, rules, categories, calendars, task systems, templates, prior products — and answers its own questions from what it finds. It takes no action during discovery.
+2. **Present findings before questions.** The first substantive message to the user is a one-screen inventory of what exists today, followed by scope confirmation — never a questionnaire.
+3. **Numbered options with recommended defaults.** Remaining decisions are offered as 2–4 numbered choices with a `(recommended)` default, so most turns can be answered with a single number. Open-ended questions are reserved for facts only the user knows: purpose, audience, authority, and policy constraints such as retention or classification.
+4. **Batch and bound.** At most five questions per message; nothing already answered by discovery or the user is asked again.
+5. **Short messages, detailed artifacts.** Conversation stays on one screen; completeness lives in the generated specification, workflow, and test artifacts.
+
+A builder that opens with a long list of open-ended questions is out of pattern and should be revised. Conformance and per-case test expectations are recorded in [`test-expectations.md`](test-expectations.md).
+
 ## How to use these prompts
 
 1. Select the builder that best matches the recurring staff task.
 2. Give the complete builder prompt to the user's authenticated desktop agent or LLM.
-3. Allow the agent to interview the user in manageable sections.
+3. Allow the agent to discover the environment, present its findings, and resolve the remaining choices as numbered options.
 4. Let the agent inspect only user-approved mailboxes, calendars, folders, templates, task systems, notebooks, or prior products.
 5. Review the proposed scope, schedule, exclusions, priorities, approval boundaries, and output format.
 6. Run a dry test against historical or synthetic inputs.
@@ -33,9 +45,9 @@ These prompts do not assume a specific orchestration platform. The agent should 
 
 Every automation-builder prompt should guide the agent through:
 
-1. Clarifying the user's objective and desired outcome.
-2. Discovering relevant systems, folders, mailboxes, calendars, templates, and systems of record.
-3. Establishing scope, exclusions, lookback periods, schedules, time zones, business-day rules, and blackout periods.
+1. Discovering relevant systems, folders, mailboxes, calendars, templates, and systems of record (read-only), and presenting the inventory.
+2. Confirming the user's objective and desired outcome against what was found, using numbered options.
+3. Establishing scope, exclusions, lookback periods, schedules, time zones, business-day rules, and blackout periods, pre-filled from discovery.
 4. Defining prioritization, escalation, classification, and exception logic.
 5. Defining what may occur automatically and what requires approval.
 6. Selecting output formats, destinations, naming conventions, and retention rules.
@@ -92,7 +104,7 @@ The builder prompt remains here as a reusable design tool.
 ### Email and inbox management
 
 - `morning-email-triage-and-brief-builder.md` — configures morning inbox triage, prioritization, action extraction, and briefing.
-- `inbox-cleanup-records-management-builder.md` — configures records-aware inbox cleanup, retention, labeling, and approval controls.
+- `inbox-organization-and-cleanup-builder.md` — discovers the full mail environment, then configures folder structure, mail rules, color-coded categories, flagging conventions, records-safe cleanup, and optional recurring maintenance.
 
 ### Reporting and activity capture
 

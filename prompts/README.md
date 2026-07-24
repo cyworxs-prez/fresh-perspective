@@ -119,4 +119,4 @@ Analytic prompts should be tested against normal, ambiguous, evidence-gap, contr
 - `shared/intelligence-tradecraft/` — interview and scoping, evidence ledgers, structured analytic technique facilitation, and key-judgment drafting.
 - `joint/intelligence/` — JIPOE operational-environment and actor/course-of-action support.
 - `ic/icd/` — ICD 203 analytic-standards and ICD 206 sourcing review prompts.
-- `automation-design/` — interview-first builder prompts for recurring staff work on an already authenticated desktop agent or LLM environment.
+- `automation-design/` — discovery-first builder prompts for recurring staff work on an already authenticated desktop agent or LLM environment.
