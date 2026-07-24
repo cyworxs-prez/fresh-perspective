@@ -1,7 +1,7 @@
 ---
 name: influence-source-tradecraft
-summary: Collect, evaluate, corroborate, and cite evidence for area influence, access, infrastructure, and network assessments.
-version: 1.0
+summary: Domain overlay applying shared public-source evaluation to influence, access, infrastructure, and network assessments.
+version: 1.1
 maturity: draft
 namespace: functional
 human_role: analyst
@@ -16,50 +16,30 @@ references:
 
 Construct a traceable evidence base for influence, access, infrastructure, dependency, and actor-network assessments.
 
+This skill is a domain overlay on `skills/shared/intelligence-tradecraft/public-source-evaluation/`, which defines the general method — source-class hierarchy, evidence decomposition, reliability and credibility rating, independence testing, deception and agenda screening, currency revalidation, and corroboration minimums. Apply that skill's method in full; this overlay adds only what is specific to influence and access analysis.
+
 ## Required scoping check
 
 Resolve or explicitly assume the area of analysis, area of interest, target actor or comparative posture, local and partner actors, mission or decision, planning horizon, required capabilities, audience, sensitivity, and output format. Ask only for missing information that would materially change the analysis. Never inherit geography, actor, adversary, partner, or mission details from prior outputs.
 
-## Source hierarchy
+## Influence-specific source hierarchy
 
-Prioritize, when available:
+Within the shared hierarchy, prioritize for this domain:
 
 1. Laws, gazettes, ministries, legislatures, regulators, procurement portals, registries, courts, and infrastructure authorities in the area of analysis.
 2. Target-actor central and subnational government, diplomatic, military, security, party, financial, state-owned enterprise, and affiliated sources.
 3. Relevant partner, allied, competitor, neutral, and multilateral official sources.
 4. Audited company filings, lender disclosures, concession agreements, environmental filings, and exchange records.
-5. Peer-reviewed research and established research institutions.
-6. Reputable international and local journalism.
-7. Specialist databases and commercial data providers.
-8. Social media and unattributed claims as leads only.
+5. Peer-reviewed research, established institutions, reputable journalism, and specialist databases, per the shared ordering.
+6. Social media and unattributed claims as leads only.
 
-## Evidence decomposition
+## Influence-specific evidence decomposition
 
-For each claim, separately record whether evidence establishes contact, relationship, payment or contract, ownership or control, access, intent, activation, behavioral effect, or operational effect. Do not treat these as interchangeable.
-
-## Source rating
-
-Rate source reliability A–F and information credibility 1–6. Use combined notation such as B2 or F3.
-
-## Independence test
-
-Do not count multiple reports as corroboration when they derive from the same press release, anonymous source, allegation, government briefing, database, social-media post, or wire article.
-
-## Deception and agenda screen
-
-For every critical source assess access, incentives, advocacy, likely audience effect, alternative political explanations, and whether disclosure itself could be an influence action.
+When decomposing what evidence establishes, use this domain's chain explicitly: contact, relationship, payment or contract, ownership or control, access, intent, activation, behavioral effect, operational effect. A source establishing an earlier link never establishes a later one by itself.
 
 ## Research ledger
 
-Maintain one row per material claim with claim ID, claim text, source, publisher, dates, source type, reliability, credibility, independence group, what the source proves, what it does not prove, geographic relevance, actor or node relevance, confidence contribution, and citation.
-
-## Current-information rule
-
-Revalidate officeholders, military leaders, ownership, contracts, project status, legal authorities, election calendars, event dates, and infrastructure operating status immediately before release.
-
-## Minimum corroboration standard
-
-For high-impact judgments seek one primary source plus one independent corroborating source, or two independent high-quality sources with distinct access. If unmet, lower confidence and state the collection gap.
+Maintain one row per material claim with claim ID, claim text, source, publisher, dates, source type, reliability, credibility, independence group, what the source proves, what it does not prove, geographic relevance, actor or node relevance, confidence contribution, and citation — the spreadsheet form is `templates/intelligence/influence-claim-ledger.csv`.
 
 ## Activation criteria and non-use cases
 
@@ -67,9 +47,10 @@ Use this skill whenever an influence, access, infrastructure, or network assessm
 
 ## Quality-control checklist
 
+- [ ] The shared public-source-evaluation method was applied in full, not partially.
 - [ ] Every material claim has a ledger row with source, dates, and rating.
 - [ ] Independence groups prevent circular corroboration.
-- [ ] What each source proves and does not prove is recorded separately.
+- [ ] What each source proves and does not prove is recorded separately along the influence chain.
 - [ ] Officeholders, contracts, and statuses were revalidated before release.
 - [ ] Unmet corroboration standards lowered confidence and produced a stated gap.
 
@@ -83,6 +64,7 @@ The human analyst approves source ratings, independence groupings, corroboration
 
 ## Related assets
 
+- `skills/shared/intelligence-tradecraft/public-source-evaluation/`
 - `skills/shared/intelligence-tradecraft/evidence-and-claim-ledger/`
 - `skills/functional/influence-access-analysis/baseline-assessment/`
 - `skills/ic/icd/icd-206-sourcing-review/`

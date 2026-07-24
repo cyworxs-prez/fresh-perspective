@@ -154,7 +154,8 @@ Initial skills:
 - evidence and claim ledger;
 - structured analytic technique facilitation;
 - assessment language and confidence support;
-- intelligence requirements and collection support (candidate PIR/EEI/SIR/RFI lifecycle without tasking authority).
+- intelligence requirements and collection support (candidate PIR/EEI/SIR/RFI lifecycle without tasking authority);
+- public-source evaluation (hierarchy, independence, deception screening, corroboration minimums), which the influence collection's source-tradecraft skill now overlays.
 
 Companion prompts are under `prompts/shared/intelligence-tradecraft/`, with reusable working artifacts under `templates/intelligence/` — including finished-product templates (warning note, intelligence summary, product read-ahead) alongside the working matrices and registers.
 
