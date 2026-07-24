@@ -84,7 +84,7 @@ workflows/
   README.md
   <domain-or-function>/
 
-  automations/
+automations/
   README.md
   <domain-or-function>/
     <automation>.yaml
