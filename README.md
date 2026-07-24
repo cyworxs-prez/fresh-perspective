@@ -153,9 +153,11 @@ Initial skills:
 - analyst interview and task scoping;
 - evidence and claim ledger;
 - structured analytic technique facilitation;
-- assessment language and confidence support.
+- assessment language and confidence support;
+- intelligence requirements and collection support (candidate PIR/EEI/SIR/RFI lifecycle without tasking authority);
+- public-source evaluation (hierarchy, independence, deception screening, corroboration minimums), which the influence collection's source-tradecraft skill now overlays.
 
-Companion prompts are under `prompts/shared/intelligence-tradecraft/`, with reusable working artifacts under `templates/intelligence/`.
+Companion prompts are under `prompts/shared/intelligence-tradecraft/`, with reusable working artifacts under `templates/intelligence/` — including finished-product templates (warning note, intelligence summary, product read-ahead) alongside the working matrices and registers.
 
 ### Joint intelligence
 
@@ -246,9 +248,6 @@ Every reusable asset must:
 
 Deferred capabilities, in rough priority order:
 
-- collection management as a dedicated skill (PIR/RFI/ISR request lifecycle beyond the existing indicators-and-warning fragments);
-- finished-product templates (warning note, intelligence summary, read-ahead formats);
-- promotion of OSINT-specific sourcing guidance from the influence collection into `shared/`;
 - navy, marine-corps, air-force, and space-force intelligence namespaces;
 - `frameworks/`, `examples/`, and `docs/` directories once approved content exists;
 - promotion of skills from draft to tested as live-session results land in each collection's `test-expectations.md`.

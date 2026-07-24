@@ -116,7 +116,7 @@ Every skill should include:
 
 ## Current collections
 
-- `shared/intelligence-tradecraft/` — analyst interview and scoping, evidence and claim ledgers, structured analytic technique facilitation, and assessment-language and confidence support.
+- `shared/intelligence-tradecraft/` — analyst interview and scoping, evidence and claim ledgers, structured analytic technique facilitation, assessment-language and confidence support, and intelligence-requirements and collection-support lifecycle management.
 - `joint/intelligence/` — JIPOE operational-environment, actor, capability, course-of-action, indicator, and gap support.
 - `ic/icd/` — public ICD 203 analytic-standards and ICD 206 sourcing reviews.
 - `army/intelligence/` — Army IPB steps one through four with companion prompts.

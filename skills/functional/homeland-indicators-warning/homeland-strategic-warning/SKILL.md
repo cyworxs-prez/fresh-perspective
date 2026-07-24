@@ -289,4 +289,5 @@ The responsible analyst and the organization's review chain adjudicate every war
 - `skills/shared/intelligence-tradecraft/analyst-interview-and-scope/`
 - `skills/shared/intelligence-tradecraft/evidence-and-claim-ledger/`
 - `templates/intelligence/indicator-register.csv`
+- `templates/intelligence/warning-note.md`
 - `prompts/functional/research-analysis/all-source/10-indicators-warning.md`
